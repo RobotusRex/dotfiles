@@ -71,4 +71,6 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap æ <C-]>
 nnoremap ø <C-t>
 
-set tags+=tags;$HOME
+set tags=./tags;$HOME
+let g:easytags_dynamic_files = 1
+"set tags+=~/tagtest/lib/tags
