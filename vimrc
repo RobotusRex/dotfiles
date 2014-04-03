@@ -1,5 +1,57 @@
 "" Must be first
 set nocompatible
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install plugins
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between here and filetype plugin indent on.
+" scripts on GitHub repos
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+"Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'tpope/vim-rails.git'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" scripts from http://vim-scripts.org/vim/scripts.html
+Plugin 'taglist.vim'
+Plugin 'undotree.vim'
+Plugin 'L9'
+Plugin 'YankRing.vim'
+Plugin 'AutoComplPop'
+Plugin 'a.vim'
+" scripts not on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" ...
+
+filetype plugin indent on     " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Plugin commands are not allowed.
+" Put your stuff after this line
 
 "" In Makefiles DO NOT use spaces instead of tabs
 autocmd FileType make setlocal noexpandtab
@@ -51,8 +103,8 @@ nnoremap <C-l> <C-w>l
 nnoremap j gj
 nnoremap k gk
 
-execute pathogen#infect()
-filetype plugin indent on
+""execute pathogen#infect()
+""filetype plugin indent on
 syntax on
 set modelines=0
 
@@ -64,8 +116,15 @@ inoremap <silent> <F3> <ESC>:YRShow<cr>
 nnoremap <silent> <F4> :TlistToggle<cr><C-w>h
 inoremap <silent> <F4> <ESC>:TlistToggle<cr><C-w>h
 
+" Open NERDTree
+nnoremap <silent> <F7> :NERDTreeToggle<cr>
+inoremap <silent> <F7> <ESC>:NERDTreeToggle<cr>
+
+nmap <F8> :TagbarToggle<CR>
+
 " Open undo tree
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :UndotreeToggle<CR><cr><C-w>h
+
 
 " Tag command
 nnoremap æ <C-]>
