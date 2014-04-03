@@ -103,8 +103,6 @@ nnoremap <C-l> <C-w>l
 nnoremap j gj
 nnoremap k gk
 
-""execute pathogen#infect()
-""filetype plugin indent on
 syntax on
 set modelines=0
 
