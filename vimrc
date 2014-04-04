@@ -21,6 +21,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 "Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -123,6 +126,17 @@ nmap <F8> :TagbarToggle<CR>
 " Open undo tree
 nnoremap <F5> :UndotreeToggle<CR><cr><C-w>h
 
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<C-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDir="~/.vim/bundle/vim-snippets/UltiSnips/"
+
+let g:tex_flavor="tex"
 
 " Tag command
 nnoremap æ <C-]>
