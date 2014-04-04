@@ -76,6 +76,9 @@ alias :x=' exit'
 alias cd..='cd ..'
 # }}}
 
+alias lock="xscreensaver-command -lock"
+alias cal="ncal -3MC"
+
 ## Pacman aliases ## {{{
 #if necessary, replace 'pacman' with your favorite AUR helper and adapt the commands accordingly
 alias pac="sudo /usr/bin/pacman -S"		# default action	- install one or more packages
