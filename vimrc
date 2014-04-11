@@ -30,6 +30,7 @@ Plugin 'honza/vim-snippets'
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
+Plugin 'QuickBuf'
 Plugin 'taglist.vim'
 Plugin 'undotree.vim'
 Plugin 'L9'
@@ -115,14 +116,14 @@ nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " Open tag list
-nnoremap <silent> <F4> :TlistToggle<cr><C-w>h
-inoremap <silent> <F4> <ESC>:TlistToggle<cr><C-w>h
+nnoremap <silent> <F8> :TlistToggle<cr><C-w>h
+inoremap <silent> <F8> <ESC>:TlistToggle<cr><C-w>h
 
 " Open NERDTree
 nnoremap <silent> <F7> :NERDTreeToggle<cr>
 inoremap <silent> <F7> <ESC>:NERDTreeToggle<cr>
 
-nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarToggle<CR>
 
 " Open undo tree
 nnoremap <F5> :UndotreeToggle<CR><cr><C-w>h
