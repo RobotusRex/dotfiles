@@ -78,6 +78,7 @@ set hlsearch " Highlight searched phrases
 set incsearch " Highlight while searching
 set showmatch " Briefly jump to matching bracket
 set gdefault " Make search global by default
+set linebreak " wordwrap
 
 "" Tab settings
 set tabstop=4
@@ -129,6 +130,7 @@ nnoremap <F5> :UndotreeToggle<CR><cr><C-w>h
 " Trigger configuration. Do not use <tab> if you use YouCompleteMe
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-tab>"
+nnoremap <leader>u :call UltiSnips#ListSnippets() <cr>
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
