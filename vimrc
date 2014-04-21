@@ -35,7 +35,7 @@ Plugin 'taglist.vim'
 Plugin 'undotree.vim'
 Plugin 'L9'
 Plugin 'YankRing.vim'
-Plugin 'AutoComplPop'
+"Plugin 'AutoComplPop'
 Plugin 'a.vim'
 " scripts not on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -140,6 +140,8 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDir="~/.vim/bundle/vim-snippets/UltiSnips/"
 
 let g:tex_flavor="tex"
+
+let g:yankring_history_dir="~/.vim/"
 
 " Tag command
 nnoremap æ <C-]>
