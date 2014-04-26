@@ -45,7 +45,7 @@ if [ $UID -ne 0 ]; then
 fi
 
 ## ls ## {{{
-alias ls='ls -hF --color=auto'
+alias ls='ls -h --color=auto'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ls -A'

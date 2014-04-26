@@ -115,15 +115,17 @@ set modelines=0
 nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
-" Open tag list
-nnoremap <silent> <F8> :TlistToggle<cr><C-w>h
-inoremap <silent> <F8> <ESC>:TlistToggle<cr><C-w>h
-
 " Open NERDTree
 nnoremap <silent> <F7> :NERDTreeToggle<cr>
 inoremap <silent> <F7> <ESC>:NERDTreeToggle<cr>
 
-nmap <F9> :TagbarToggle<CR>
+" Open tag list
+nnoremap <silent> <F8> :TlistToggle<cr><C-w>h
+inoremap <silent> <F8> <ESC>:TlistToggle<cr><C-w>h
+
+nnoremap <silent> <F9> :TagbarToggle<cr><C-w>l
+inoremap <silent> <F9> <ESC>:TagbarToggle<cr><C-w>l
+"nmap <F9> :TagbarToggle<CR>
 
 " Open undo tree
 nnoremap <F5> :UndotreeToggle<CR><cr><C-w>h
@@ -134,6 +136,9 @@ let g:UltiSnipsListSnippets="<C-tab>"
 nnoremap <leader>u :call UltiSnips#ListSnippets() <cr>
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:ycm_key_list_select_completion = ['<S-space>']
+let g:ycm_key_list_previous_completion = ['<C-S-space>']
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
